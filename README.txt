@@ -1,9 +1,5 @@
-MyOS V0.2.4
--------------------------------------------------
 Creator: Anish Sharma
 
--------------------------------------------------
-About
--------------------------------------------------
+# MyOS
 
-This is MyOS created by me - Anish Sharma
+This is a Hobby OS
