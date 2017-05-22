@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{75E93628-A0A8-4121-93F3-DDBF255E480F}</ProjectGuid>
+    <Keyword>MakeFileProj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Makefile</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Makefile</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <NMakePreprocessorDefinitions>WIN32;_DEBUG;$(NMakePreprocessorDefinitions)</NMakePreprocessorDefinitions>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <NMakePreprocessorDefinitions>WIN32;NDEBUG;$(NMakePreprocessorDefinitions)</NMakePreprocessorDefinitions>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <None Include="boot\bios.ASM" />
+    <None Include="boot\boot_sector.asm" />
+    <None Include="boot\boot_sector.bin" />
+    <None Include="boot\boot_stage2.asm" />
+    <None Include="boot\boot_stage2.bin" />
+    <None Include="boot\gdt.ASM" />
+    <None Include="boot\print32.ASM" />
+    <None Include="boot\protected_mode.ASM" />
+    <None Include="halx86\ISR.asm" />
+    <None Include="kernel\kernel.bin" />
+    <None Include="kernel\kernel_start.asm" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="dataman\dataman.c" />
+    <ClCompile Include="drivers\keyboard.c" />
+    <ClCompile Include="drivers\screen.c" />
+    <ClCompile Include="halx86\cursor.c" />
+    <ClCompile Include="halx86\hal.c" />
+    <ClCompile Include="halx86\int86.c" />
+    <ClCompile Include="halx86\irq.c" />
+    <ClCompile Include="halx86\isrHandle.c" />
+    <ClCompile Include="halx86\misc.c" />
+    <ClCompile Include="halx86\pic.c" />
+    <ClCompile Include="halx86\pit.c" />
+    <ClCompile Include="halx86\ports.c" />
+    <ClCompile Include="kernel\kernel.c" />
+    <ClCompile Include="physmm\physmm.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="dataman\dataman.h" />
+    <ClInclude Include="drivers\characters.h" />
+    <ClInclude Include="drivers\colors.h" />
+    <ClInclude Include="drivers\keyboard.h" />
+    <ClInclude Include="drivers\screen.h" />
+    <ClInclude Include="halx86\cursor.h" />
+    <ClInclude Include="halx86\hal.h" />
+    <ClInclude Include="halx86\idt.h" />
+    <ClInclude Include="halx86\irq.h" />
+    <ClInclude Include="halx86\isr_decl.h" />
+    <ClInclude Include="halx86\misc.h" />
+    <ClInclude Include="halx86\pic.h" />
+    <ClInclude Include="halx86\pit.h" />
+    <ClInclude Include="halx86\ports.h" />
+    <ClInclude Include="physmm\physmm.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
