@@ -81,6 +81,7 @@
     <None Include="HAL\x86\ISR.asm" />
     <None Include="kernel\kernel.bin" />
     <None Include="kernel\kernel_start.asm" />
+    <None Include="res\zero2048.asm" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="dataman\dataman.c" />

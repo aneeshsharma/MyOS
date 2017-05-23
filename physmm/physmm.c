@@ -85,6 +85,8 @@ void initialize_physmm(void){
             clear_region(physmm_mmap[i].base, physmm_mmap[i].base + physmm_mmap[i].length - 1);
         }
     }
+
+	set_region(KERNEL_BASE, KERNEL_BASE + KERNEL_LENGTH);
 }
 
 void set_block(uint32_t block_num){

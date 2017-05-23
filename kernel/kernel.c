@@ -11,8 +11,6 @@ extern memoryMB;
 
 void print_menu(uint8_t n);
 
-uint64_t x[1000];
-
 void main()
 {
     /*Declarations*/
@@ -23,9 +21,6 @@ void main()
     #endif
     
     uint16_t i = 0;
-    
-    for(i=0;i<1000;i++)
-        x[i] = 0;
     
     fillScreen();
     
@@ -43,7 +38,6 @@ void main()
     print("X reserved a block");
     uint8_t* y = malloc();
 	print("Y reserved a block");
-    delay(1000);
     dump(y);
 	print("Y deleted a block");
     

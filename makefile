@@ -17,7 +17,7 @@ ASMOBJ = ${ASM_SOURCES:.asm=.o}
 
 all: os-image.img
 
-os-image.img: boot/x86/boot_sector.bin boot/x86/boot_stage2.bin kernel/kernel.bin
+os-image.img: boot/x86/boot_sector.bin boot/x86/boot_stage2.bin kernel/kernel.bin res/zero2048.bin
 	cat $^ > $@
 	echo "OS Image size:"
 	wc -c os-image.img

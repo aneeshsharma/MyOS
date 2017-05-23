@@ -48,6 +48,9 @@
     <None Include="HAL\x86\ISR.asm">
       <Filter>Source Files</Filter>
     </None>
+    <None Include="res\zero2048.asm">
+      <Filter>Source Files</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="dataman\dataman.c">
