@@ -70,49 +70,49 @@
   <ItemDefinitionGroup>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <None Include="boot\bios.ASM" />
-    <None Include="boot\boot_sector.asm" />
-    <None Include="boot\boot_sector.bin" />
-    <None Include="boot\boot_stage2.asm" />
-    <None Include="boot\boot_stage2.bin" />
-    <None Include="boot\gdt.ASM" />
-    <None Include="boot\print32.ASM" />
-    <None Include="boot\protected_mode.ASM" />
-    <None Include="halx86\ISR.asm" />
+    <None Include="boot\x86\bios.ASM" />
+    <None Include="boot\x86\boot_sector.asm" />
+    <None Include="boot\x86\boot_sector.bin" />
+    <None Include="boot\x86\boot_stage2.asm" />
+    <None Include="boot\x86\boot_stage2.bin" />
+    <None Include="boot\x86\gdt.ASM" />
+    <None Include="boot\x86\print32.ASM" />
+    <None Include="boot\x86\protected_mode.ASM" />
+    <None Include="HAL\x86\ISR.asm" />
     <None Include="kernel\kernel.bin" />
     <None Include="kernel\kernel_start.asm" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="dataman\dataman.c" />
-    <ClCompile Include="drivers\keyboard.c" />
-    <ClCompile Include="drivers\screen.c" />
-    <ClCompile Include="halx86\cursor.c" />
-    <ClCompile Include="halx86\hal.c" />
-    <ClCompile Include="halx86\int86.c" />
-    <ClCompile Include="halx86\irq.c" />
-    <ClCompile Include="halx86\isrHandle.c" />
-    <ClCompile Include="halx86\misc.c" />
-    <ClCompile Include="halx86\pic.c" />
-    <ClCompile Include="halx86\pit.c" />
-    <ClCompile Include="halx86\ports.c" />
+    <ClCompile Include="drivers\x86\keyboard.c" />
+    <ClCompile Include="drivers\x86\screen.c" />
+    <ClCompile Include="HAL\x86\cursor.c" />
+    <ClCompile Include="HAL\x86\hal.c" />
+    <ClCompile Include="HAL\x86\int86.c" />
+    <ClCompile Include="HAL\x86\irq.c" />
+    <ClCompile Include="HAL\x86\isrHandle.c" />
+    <ClCompile Include="HAL\x86\misc.c" />
+    <ClCompile Include="HAL\x86\pic.c" />
+    <ClCompile Include="HAL\x86\pit.c" />
+    <ClCompile Include="HAL\x86\ports.c" />
     <ClCompile Include="kernel\kernel.c" />
     <ClCompile Include="physmm\physmm.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="dataman\dataman.h" />
-    <ClInclude Include="drivers\characters.h" />
-    <ClInclude Include="drivers\colors.h" />
-    <ClInclude Include="drivers\keyboard.h" />
-    <ClInclude Include="drivers\screen.h" />
-    <ClInclude Include="halx86\cursor.h" />
-    <ClInclude Include="halx86\hal.h" />
-    <ClInclude Include="halx86\idt.h" />
-    <ClInclude Include="halx86\irq.h" />
-    <ClInclude Include="halx86\isr_decl.h" />
-    <ClInclude Include="halx86\misc.h" />
-    <ClInclude Include="halx86\pic.h" />
-    <ClInclude Include="halx86\pit.h" />
-    <ClInclude Include="halx86\ports.h" />
+    <ClInclude Include="drivers\x86\characters.h" />
+    <ClInclude Include="drivers\x86\colors.h" />
+    <ClInclude Include="drivers\x86\keyboard.h" />
+    <ClInclude Include="drivers\x86\screen.h" />
+    <ClInclude Include="HAL\x86\cursor.h" />
+    <ClInclude Include="HAL\x86\hal.h" />
+    <ClInclude Include="HAL\x86\idt.h" />
+    <ClInclude Include="HAL\x86\irq.h" />
+    <ClInclude Include="HAL\x86\isr_decl.h" />
+    <ClInclude Include="HAL\x86\misc.h" />
+    <ClInclude Include="HAL\x86\pic.h" />
+    <ClInclude Include="HAL\x86\pit.h" />
+    <ClInclude Include="HAL\x86\ports.h" />
     <ClInclude Include="physmm\physmm.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

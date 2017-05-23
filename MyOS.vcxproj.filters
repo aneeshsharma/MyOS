@@ -15,75 +15,42 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <None Include="boot\bios.ASM">
-      <Filter>Source Files</Filter>
-    </None>
-    <None Include="boot\boot_sector.asm">
-      <Filter>Source Files</Filter>
-    </None>
-    <None Include="boot\boot_stage2.asm">
-      <Filter>Source Files</Filter>
-    </None>
-    <None Include="boot\gdt.ASM">
-      <Filter>Source Files</Filter>
-    </None>
-    <None Include="boot\print32.ASM">
-      <Filter>Source Files</Filter>
-    </None>
-    <None Include="boot\protected_mode.ASM">
-      <Filter>Source Files</Filter>
-    </None>
-    <None Include="halx86\ISR.asm">
-      <Filter>Source Files</Filter>
-    </None>
     <None Include="kernel\kernel_start.asm">
       <Filter>Source Files</Filter>
-    </None>
-    <None Include="boot\boot_sector.bin">
-      <Filter>Resource Files</Filter>
-    </None>
-    <None Include="boot\boot_stage2.bin">
-      <Filter>Resource Files</Filter>
     </None>
     <None Include="kernel\kernel.bin">
       <Filter>Resource Files</Filter>
     </None>
+    <None Include="boot\x86\bios.ASM">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="boot\x86\boot_sector.asm">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="boot\x86\boot_sector.bin">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="boot\x86\boot_stage2.asm">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="boot\x86\boot_stage2.bin">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="boot\x86\gdt.ASM">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="boot\x86\print32.ASM">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="boot\x86\protected_mode.ASM">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="HAL\x86\ISR.asm">
+      <Filter>Source Files</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="dataman\dataman.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="drivers\keyboard.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="drivers\screen.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="halx86\cursor.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="halx86\hal.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="halx86\int86.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="halx86\irq.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="halx86\isrHandle.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="halx86\misc.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="halx86\pic.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="halx86\pit.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="halx86\ports.c">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="kernel\kernel.c">
@@ -92,51 +59,84 @@
     <ClCompile Include="physmm\physmm.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="drivers\x86\keyboard.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="drivers\x86\screen.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="HAL\x86\cursor.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="HAL\x86\hal.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="HAL\x86\int86.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="HAL\x86\irq.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="HAL\x86\isrHandle.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="HAL\x86\misc.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="HAL\x86\pic.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="HAL\x86\pit.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="HAL\x86\ports.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="dataman\dataman.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="drivers\characters.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="drivers\colors.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="drivers\keyboard.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="drivers\screen.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="halx86\cursor.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="halx86\hal.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="halx86\idt.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="halx86\irq.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="halx86\isr_decl.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="halx86\misc.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="halx86\pic.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="halx86\pit.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="halx86\ports.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="physmm\physmm.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="drivers\x86\characters.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="drivers\x86\colors.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="drivers\x86\keyboard.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="drivers\x86\screen.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="HAL\x86\cursor.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="HAL\x86\hal.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="HAL\x86\idt.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="HAL\x86\irq.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="HAL\x86\isr_decl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="HAL\x86\misc.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="HAL\x86\pic.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="HAL\x86\pit.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="HAL\x86\ports.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

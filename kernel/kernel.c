@@ -11,6 +11,8 @@ extern memoryMB;
 
 void print_menu(uint8_t n);
 
+uint64_t x[1000];
+
 void main()
 {
     /*Declarations*/
@@ -22,35 +24,38 @@ void main()
     
     uint16_t i = 0;
     
+    for(i=0;i<1000;i++)
+        x[i] = 0;
+    
+    fillScreen();
+    
     hal_initialize();
     
     initialize_physmm();
-
-	clrscr();
-    print("Number of Blocks:");
-
     
-    print("Reserved B:");
+    print("Number of Blocks:");
+    printfNum(get_mem_blocks(), 10);
+    
+    print("Reserved Blocks:");
+    printfNum(get_reserved_blocks(), 10);
     
     uint8_t* x = malloc();
     print("X reserved a block");
     uint8_t* y = malloc();
+	print("Y reserved a block");
     delay(1000);
     dump(y);
-    print("Y reserved a block");
+	print("Y deleted a block");
     
     print("Free Blocks:");
+    printfNum(get_free_blocks(), 10);
     
     print("First Free Block:");
+    printfNum(get_first_free_block(), 16);
     
     print("Memory (in MB):");
-
-	write_status(status);
-
-	while(1) {
-		if (get_tick() % 1000 == 0)
-			print("Tick");
-	}
+    printfNum(memoryMB, 10);    
+    write_status(status);
 }
 
 void print_menu(uint8_t n){
