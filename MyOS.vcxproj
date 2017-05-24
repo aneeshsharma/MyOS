@@ -92,12 +92,13 @@
     <ClCompile Include="HAL\x86\int86.c" />
     <ClCompile Include="HAL\x86\irq.c" />
     <ClCompile Include="HAL\x86\isrHandle.c" />
-    <ClCompile Include="HAL\x86\misc.c" />
+    <ClCompile Include="console\misc.c" />
     <ClCompile Include="HAL\x86\pic.c" />
     <ClCompile Include="HAL\x86\pit.c" />
     <ClCompile Include="HAL\x86\ports.c" />
     <ClCompile Include="kernel\kernel.c" />
     <ClCompile Include="physmm\physmm.c" />
+    <ClCompile Include="virtualmm\virtualmm.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="dataman\dataman.h" />
@@ -110,11 +111,12 @@
     <ClInclude Include="HAL\x86\idt.h" />
     <ClInclude Include="HAL\x86\irq.h" />
     <ClInclude Include="HAL\x86\isr_decl.h" />
-    <ClInclude Include="HAL\x86\misc.h" />
+    <ClInclude Include="console\misc.h" />
     <ClInclude Include="HAL\x86\pic.h" />
     <ClInclude Include="HAL\x86\pit.h" />
     <ClInclude Include="HAL\x86\ports.h" />
     <ClInclude Include="physmm\physmm.h" />
+    <ClInclude Include="virtualmm\virtualmm.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

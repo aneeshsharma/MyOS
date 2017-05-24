@@ -15,7 +15,7 @@ void main()
 {
     /*Declarations*/
     #ifdef DEBUG
-        char* status = "MOS V2.0 Copyright 2017 | Welcome Anish Sharma | Development Build";
+        char* status = "MOS V2.0 Copyright 2017";
     #else
         char* status = "Welcome Anish Sharma";
     #endif
@@ -50,15 +50,16 @@ void main()
     print("Memory (in MB):");
     printfNum(memoryMB, 10);    
     write_status(status);
+	print("Press any number key to open MENU");
+	for (;;) {
+		if (get_tick() % 10 == 0) {
+			update_cursor(0, getCLine());
+		}
+	}
 }
 
 void print_menu(uint8_t n){
     clrscr();
-    print("");
-    print("");
-    print("");
-    print("");
-    print("");
     write_string_line(0x1e, "Welcome to MOS V2.0! Below is the menu. Open up help to start.", 0);
     write_string_line(0x1e, "MENU - Press a number to select the option", 1);
     write_string_line((n==1)?0x30:0x1f, "1. Help", 2);

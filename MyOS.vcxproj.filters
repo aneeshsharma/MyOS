@@ -83,9 +83,6 @@
     <ClCompile Include="HAL\x86\isrHandle.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="HAL\x86\misc.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="HAL\x86\pic.c">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -93,6 +90,12 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="HAL\x86\ports.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="console\misc.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="virtualmm\virtualmm.c">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -130,9 +133,6 @@
     <ClInclude Include="HAL\x86\isr_decl.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="HAL\x86\misc.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="HAL\x86\pic.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -140,6 +140,12 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="HAL\x86\ports.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="console\misc.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="virtualmm\virtualmm.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

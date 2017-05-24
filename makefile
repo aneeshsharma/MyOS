@@ -1,6 +1,6 @@
-DIRECTORIES = boot kernel drivers HALx86 dataman physmm
+DIRECTORIES = boot kernel drivers HAL dataman physmm virtualmm console
 
-C_SOURCES = $(wildcard drivers/x86/*.c HAL/x86/*.c dataman/*.c physmm/*.c)
+C_SOURCES = $(wildcard drivers/x86/*.c HAL/x86/*.c dataman/*.c physmm/*.c virtualmm/*.c console/*.c)
 ASM_SOURCES = $(wildcard HAL/x86/*.asm)
 
 CC = gcc
@@ -19,8 +19,6 @@ all: os-image.img
 
 os-image.img: boot/x86/boot_sector.bin boot/x86/boot_stage2.bin kernel/kernel.bin res/zero2048.bin
 	cat $^ > $@
-	echo "OS Image size:"
-	wc -c os-image.img
 
 kernel/kernel.bin: ${KERNEL} ${ASMOBJ} ${OBJ}
 	ld -melf_i386 -o $@ -Ttext 0x1000 $^ --oformat binary
@@ -41,6 +39,8 @@ clean:
 	rm -fr dataman/*.o
 	rm -fr physmm/*.o
 	rm -fr boot/x86/*.bin
+	rm -fr console/*.o
+	rm -fr virtualmm/*.o
 	rm -fr os-image.img *.bin *.o
 
 rebuild:

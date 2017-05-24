@@ -11,7 +11,7 @@
 #define KERNEL_BASE 0x1000
 #define KERNEL_LENGTH 15888
 
-#define NUM_REGIONS 10
+#define MAX_NUM_REGIONS 10
 #define BLOCK_SIZE 4096
 
 void get_mem_details(void);
@@ -30,6 +30,7 @@ int32_t get_first_free_block(void);
 inline uint32_t get_mem_blocks(void);
 inline uint32_t get_reserved_blocks(void);
 inline uint32_t get_free_blocks(void);
+inline uint16_t get_no_of_regions(void);
 
 uint8_t* malloc(void);
 uint8_t dump(uint8_t* block);

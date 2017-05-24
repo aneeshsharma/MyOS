@@ -13,7 +13,9 @@ typedef struct {
     uint32_t ext_attr;
 }mmap_t;
 
-mmap_t physmm_mmap[NUM_REGIONS];
+mmap_t physmm_mmap[MAX_NUM_REGIONS];
+
+uint16_t no_of_regions;
 
 uint32_t no_mem_blocks;
 uint32_t* mem_blocks;
@@ -42,7 +44,7 @@ void initialize_physmm(void){
     uint32_t i=0, j=0;
     uint64_t y = 0;
     
-    uint16_t no_of_regions = *((uint16_t*)0x50c);
+    no_of_regions = *((uint16_t*)0x50c);
     
     get_mem_details();
     
@@ -173,4 +175,9 @@ inline uint32_t get_reserved_blocks(void){
 
 inline uint32_t get_free_blocks(void){
     return free;
+}
+
+inline uint16_t get_no_of_regions(void)
+{
+	return no_of_regions;
 }
