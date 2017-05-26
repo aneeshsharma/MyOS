@@ -21,6 +21,14 @@ char getDigit(char x)
     }
 }
 
+void mem_set(unsigned char * addr, uint32_t len)
+{
+	uint32_t i = 0;
+	for (i = 0;i < len;i++) {
+		addr[i] = 0;
+	}
+}
+
 int intLen(uint32_t x, short base)
 {
     int i=0;

@@ -14,6 +14,8 @@
 #define MAX_NUM_REGIONS 10
 #define BLOCK_SIZE 4096
 
+#define GET_ADDRESS(x) x*BLOCK_SIZE
+
 void get_mem_details(void);
 
 void initialize_physmm(void);
@@ -32,7 +34,8 @@ inline uint32_t get_reserved_blocks(void);
 inline uint32_t get_free_blocks(void);
 inline uint16_t get_no_of_regions(void);
 
-uint8_t* malloc(void);
-uint8_t dump(uint8_t* block);
+unsigned char* malloc(void);
+unsigned char* malloc_bytes(uint32_t bytes);
+uint8_t dump(unsigned char* block);
  
 #endif

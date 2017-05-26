@@ -82,6 +82,7 @@
     <None Include="kernel\kernel.bin" />
     <None Include="kernel\kernel_start.asm" />
     <None Include="res\zero2048.asm" />
+    <None Include="virtualmm\x86\paging.asm" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="dataman\dataman.c" />
@@ -98,7 +99,7 @@
     <ClCompile Include="HAL\x86\ports.c" />
     <ClCompile Include="kernel\kernel.c" />
     <ClCompile Include="physmm\physmm.c" />
-    <ClCompile Include="virtualmm\virtualmm.c" />
+    <ClCompile Include="virtualmm\x86\virtualmm.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="dataman\dataman.h" />
@@ -116,7 +117,7 @@
     <ClInclude Include="HAL\x86\pit.h" />
     <ClInclude Include="HAL\x86\ports.h" />
     <ClInclude Include="physmm\physmm.h" />
-    <ClInclude Include="virtualmm\virtualmm.h" />
+    <ClInclude Include="virtualmm\x86\virtualmm.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

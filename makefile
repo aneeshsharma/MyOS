@@ -1,7 +1,7 @@
 DIRECTORIES = boot kernel drivers HAL dataman physmm virtualmm console
 
-C_SOURCES = $(wildcard drivers/x86/*.c HAL/x86/*.c dataman/*.c physmm/*.c virtualmm/*.c console/*.c)
-ASM_SOURCES = $(wildcard HAL/x86/*.asm)
+C_SOURCES = $(wildcard drivers/x86/*.c HAL/x86/*.c dataman/*.c physmm/*.c virtualmm/x86/*.c console/*.c)
+ASM_SOURCES = $(wildcard HAL/x86/*.asm virtualmm/x86/*.asm)
 
 CC = gcc
 CFLAGS = -DDEBUG -m32 -ffreestanding -c -nostdlib -lgcc
@@ -40,7 +40,7 @@ clean:
 	rm -fr physmm/*.o
 	rm -fr boot/x86/*.bin
 	rm -fr console/*.o
-	rm -fr virtualmm/*.o
+	rm -fr virtualmm/x86/*.o
 	rm -fr os-image.img *.bin *.o
 
 rebuild:

@@ -51,6 +51,9 @@
     <None Include="res\zero2048.asm">
       <Filter>Source Files</Filter>
     </None>
+    <None Include="virtualmm\x86\paging.asm">
+      <Filter>Source Files</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="dataman\dataman.c">
@@ -95,7 +98,7 @@
     <ClCompile Include="console\misc.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="virtualmm\virtualmm.c">
+    <ClCompile Include="virtualmm\x86\virtualmm.c">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -145,7 +148,7 @@
     <ClInclude Include="console\misc.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="virtualmm\virtualmm.h">
+    <ClInclude Include="virtualmm\x86\virtualmm.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

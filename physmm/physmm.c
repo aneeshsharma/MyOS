@@ -149,17 +149,41 @@ int32_t get_first_free_block(void){
     return -1;
 }
 
-uint8_t* malloc(void){
-    uint32_t free = get_first_free_block();
+unsigned char* malloc(void){
+    uint32_t free = get_first_free_block(), loc = 0;
     if(free==-1)
         return 0;
     
-    uint32_t loc = free * BLOCK_SIZE;
+    loc = GET_ADDRESS(free);
     set_block(free);
     return (uint8_t*) loc;
 }
 
-uint8_t dump(uint8_t* addr){
+unsigned char * malloc_bytes(uint32_t bytes)
+{
+	uint32_t no_blocks = bytes / BLOCK_SIZE + (bytes%BLOCK_SIZE == 0) ? 0 : 1;
+	uint32_t l = no_mem_blocks / 32, i = 0, j = 0;
+	uint32_t addr = 0;
+	uint32_t n = no_blocks;
+	for (i = 0; i<l; i++)
+	{
+		if (get_block(i) == 0) {
+			j = i;
+			n--;
+		}
+		else {
+			n = no_blocks;
+		}
+		if (n == 0) {
+			addr = GET_ADDRESS(j);
+			set_region(addr, addr + no_blocks * BLOCK_SIZE);
+			return (unsigned char*)addr;
+		}
+	}
+	return 0;
+}
+
+uint8_t dump(unsigned char* addr){
     uint32_t loc = ((uint32_t) addr) / BLOCK_SIZE;
     clear_block(loc);
     return 0;

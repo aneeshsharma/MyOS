@@ -27,6 +27,7 @@ void main()
     hal_initialize();
     
     initialize_physmm();
+	initialize_virtualmm();
     
     print("Number of Blocks:");
     printfNum(get_mem_blocks(), 10);
@@ -39,7 +40,12 @@ void main()
     uint8_t* y = malloc();
 	print("Y reserved a block");
     dump(y);
-	print("Y deleted a block");
+	dump(x);
+	print("X & Y deleted a block");
+
+	unsigned char* z = malloc_bytes(1000000);
+	print("Z reserved 1000000 bytes of memory");
+	printfNum((uint32_t) z);
     
     print("Free Blocks:");
     printfNum(get_free_blocks(), 10);
