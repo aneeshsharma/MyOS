@@ -35,7 +35,7 @@ inline uint32_t get_free_blocks(void);
 inline uint16_t get_no_of_regions(void);
 
 unsigned char* malloc(void);
-unsigned char* malloc_bytes(uint32_t bytes);
+unsigned char* malloc_blocks(uint32_t bytes);
 uint8_t dump(unsigned char* block);
  
 #endif

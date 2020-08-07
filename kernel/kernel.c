@@ -28,7 +28,7 @@ void main()
     
     initialize_physmm();
 	initialize_virtualmm();
-    
+
     print("Number of Blocks:");
     printfNum(get_mem_blocks(), 10);
     
@@ -43,8 +43,8 @@ void main()
 	dump(x);
 	print("X & Y deleted a block");
 
-	unsigned char* z = malloc_bytes(1000000);
-	print("Z reserved 1000000 bytes of memory");
+	unsigned char* z = malloc_blocks(2000);
+	print("Z reserved 2000 blocks of memory\nZ address:");
 	printfNum((uint32_t) z);
     
     print("Free Blocks:");

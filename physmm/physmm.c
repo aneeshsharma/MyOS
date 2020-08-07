@@ -159,9 +159,8 @@ unsigned char* malloc(void){
     return (uint8_t*) loc;
 }
 
-unsigned char * malloc_bytes(uint32_t bytes)
+unsigned char* malloc_blocks(uint32_t no_blocks)
 {
-	uint32_t no_blocks = bytes / BLOCK_SIZE + (bytes%BLOCK_SIZE == 0) ? 0 : 1;
 	uint32_t l = no_mem_blocks / 32, i = 0, j = 0;
 	uint32_t addr = 0;
 	uint32_t n = no_blocks;
@@ -177,7 +176,7 @@ unsigned char * malloc_bytes(uint32_t bytes)
 		if (n == 0) {
 			addr = GET_ADDRESS(j);
 			set_region(addr, addr + no_blocks * BLOCK_SIZE);
-			return (unsigned char*)addr;
+			return (unsigned char*) addr;
 		}
 	}
 	return 0;
